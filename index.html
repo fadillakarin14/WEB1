@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Pink Lucu 💖</title>
+        <!-- Bootstrap CSS -->
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"rel="stylesheet">
+         <!-- bootstrap Icons -->
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.o/font/bootstrap-icons.min.css"rel="stylesheet">
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+            *{
+                font-family: 'Poppins', sans-serif;
+         
+            }
+
+            body{
+                background: linear-gradient(135deg, #fcb69f 100%);
+                min-height: 100vh;
+                padding: 30px 0;
+            }
+            
+            .main-container {
+                background: white;
+                border-radius: 30px;
+                box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+                padding: 30px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .main-container::before {
+                content: '💖';
+                position: absolute;
+                font-size: 200px;
+                opacity: 0.05;
+                right: -50px;
+                top: -50px;
+                animation: float 6s ease-in-out infinite;
+
+            }
+
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+            }
+            
+            .header-section {
+                background: liner-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+                color: #ff1493;
+                padding: 50px 20px;
+                border-radius: 25px;
+                margin-bottom: 30px;
+                text-align: center;
+                box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+                position: relative;
+            }
+
+            .header-section h1 {
+                font-weight: 700;
+                text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            }
+
+            .cute-badge {
+                background: #ff69b4;
+                color: white;
+                padding: 8px 20px;
+                border-radius: 50px;
+                display: inline-block;
+                font-weight: 600;
+                box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+                margin: 5px;
+                animation: bounce 2s infinite;
+            }
+
+            @keyframes bounce {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-10px); }
+            }
+
+            .card {
+                border: none;
+                border-radius: 20px;
+                height: 100px;
+                transition: all 0.3s;
+                box-shadow: 0 5px 20px rgba(255, 105, 180, 0.2);
+            }
+
+            .card:hover {
+                transform: translateY(-10px) rotate(2deg);
+                box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4);
+            }
+
+            .card-pink {
+                background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+                color: white;
+            }
+
+            .card-coral {
+                background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+                color: #ff1493;
+            }
+            
+            .card-peach {
+                background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+                color: #d63031;
+            }
+
+            .card-lavender {
+                background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+                color: #6c5ce7;
+            }
+            
+            .icon-box {
+                font-size: 3.5rem;
+                margin-botton: 15px;
+                filter: drop-shadow(3px 3px 5px rbga(0,0,0,0.2));
+            }
+
+            .stat-box {
+               background: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%);
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border: 3px solid #ffb6c1;
+            transition: all 0.3s;
+            }
+            
+            .stat-box:hover {
+            transform: scale(1.05);
+            border-color: #ff69b4;
+            }
+
+            .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            }
+            
+            .btn-cute {
+             background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+            }
+
+             .btn-cute:hover {
+              transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(255, 105, 180, 0.6);
+            color: white;
+             }
+            
+             .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+        }
+
+        .footer-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 3px dashed #ffb6c1;
+        }
+
+         .contact-item {
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border: 2px solid #ffb6c1;
+        }
+
+        .sparkle {
+            display: inline-block;
+            animation: sparkle 1.5s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .section-title {
+            color: #ff1493;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.2);
+        }
+         </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <!-- Header Section -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-section">
+                        <h1 class="display-4 mb-3">Hai! Aku Senang Kamu Datang! <span class="sparkle">✨</span></h1>
+                        <p class="lead mb-4">Web Developer Yang Ceria & Kreatif 🎨</p>
+                        <div>
+                            <span class="cute-badge">💖 Lucu</span>
+                            <span class="cute-badge">🎀 Kreatif</span>
+                            <span class="cute-badge">🌸 Friendly</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="row mb-5">
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-box">
+                        <div class="stat-number">50+</div>
+                        <p class="mb-0 fw-bold text-danger">🎉 Projek Seru</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-box">
+                        <div class="stat-number">30+</div>
+                        <p class="mb-0 fw-bold text-danger">💕 Klien Bahagia</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-box">
+                        <div class="stat-number">5+</div>
+                        <p class="mb-0 fw-bold text-danger">⭐ Tahun Berpengalaman</p>
+                         </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-box">
+                        <div class="stat-number">100%</div>
+                        <p class="mb-0 fw-bold text-danger">🌈 Semangat!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Cards -->
+            <h2 class="section-title">Tentang Aku <span class="sparkle">💫</span></h2>
+            <div class="row mb-5">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card card-pink">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box">🎨</div>
+                            <h3 class="card-title fw-bold">Keahlian Ku</h3>
+                            <p class="card-text">HTML • CSS • JavaScript<br>PHP • MySQL • Bootstrap<br>React • Design</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card card-coral">
+                        <div class="card-body text-center p-4">
+                             <div class="icon-box">🎯</div>
+                            <h3 class="card-title fw-bold">Projek Favoritku</h3>
+                            <p class="card-text">Website Lucu 🌸<br>E-Commerce 🛍️<br>Landing Page 🎀<br>Web App 💖</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card card-lavender">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box">💌</div>
+                            <h3 class="card-title fw-bold">Yuk Kenalan!</h3>
+                            <p class="card-text">Aku suka berteman! 🤗<br>Chat aku kapan saja 💬<br>Aku Fast Response! ⚡</p>
+                        </div>
+                         </div>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="card card-peach">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold mb-3">
+                                <i class="bi bi-heart-fill me-2"></i>Cerita Singkatku
+                            </h4>
+                            <p class="card-text">Halo! Aku adalah web developer yang suka banget bikin website lucu dan berwarna-warni! Sudah 5 tahun aku bermain dengan kode dan warna. Setiap project adalah petualangan baru yang menyenangkan! 🎪</p>
+                        </div>
+                         </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card card-pink">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold mb-3">
+                                <i class="bi bi-star-fill me-2"></i>Pencapaianku
+                            </h4>
+                            <p class="card-text">Alhamdulillah sudah menyelesaikan 50+ project dengan senyuman! 😊 Semua klien senang dan puas. Aku selalu pakai teknologi terbaru dan desain yang eye-catching! ✨</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Services Section -->
+            <h2 class="section-title">Layanan Super Seru! <span class="sparkle">🎉</span></h2>
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">🎨</div>
+                            <h5 class="fw-bold text-danger">UI/UX Design</h5>
+                            <p class="small text-muted">Desain cantik & user friendly!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">📱</div>
+                            <h5 class="fw-bold text-danger">Responsive Web</h5>
+                            <p class="small text-muted">Keren di semua device!</p>
+                             </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">🛍️</div>
+                            <h5 class="fw-bold text-danger">E-Commerce</h5>
+                            <p class="small text-muted">Toko online yang menggiurkan!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">⚙️</div>
+                            <h5 class="fw-bold text-danger">Maintenance</h5>
+                            <p class="small text-muted">Jaga website tetap sehat!</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <button class="btn btn-cute" onclick="showMessage()">
+                        <i class="bi bi-chat-heart-fill me-2"></i>Yuk Chat Aku! 💬
+                    </button>
+                    <div id="message" class="alert mt-4" style="display: none; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); border: 3px solid #ff69b4; border-radius: 20px;"></div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="row footer-section">
+                <div class="col-md-4 mb-3">
+                    <div class="contact-item text-center">
+                        <i class="bi bi-envelope-heart-fill text-danger" style="font-size: 2rem;"></i>
+                        <p class="mt-2 mb-0 fw-bold text-danger">📧 hello@cuteweb.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="contact-item text-center">
+                        <i class="bi bi-phone-fill text-danger" style="font-size: 2rem;"></i>
+                       <p class="mt-2 mb-0 fw-bold text-danger">📞 +62 812-3456-7890</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="contact-item text-center">
+                        <i class="bi bi-geo-alt-fill text-danger" style="font-size: 2rem;"></i>
+                        <p class="mt-2 mb-0 fw-bold text-danger">📍 Bandung, Indonesia</p>
+                    </div>
+                </div>
+                <div class="col-12 text-center mt-4">
+                     <p class="text-danger fw-bold">💖 Dibuat dengan Cinta & Bootstrap 5 • 2025 💖</p>
+                    <p class="small text-muted">Terima kasih sudah berkunjung! Semoga harimu menyenangkan! 🌈✨</p>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showMessage() {
+            const messageDiv = document.getElementById('message');
+            const waktu = new Date().toLocaleTimeString('id-ID');
+            const emojis = ['🎉', '💖', '✨', '🌸', '🎀', '💕', '🌈', '⭐'];
+            const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+        }
+messageDiv.innerHTML = `
+                <h4 class="fw-bold text-danger">${randomEmoji} Yeay! Terima kasih sudah klik! ${randomEmoji}</h4>
+                <p class="mb-2"><strong>Waktu sekarang:</strong> ${waktu}</p>
+                <p class="mb-0">Website pink lucu ini dibuat dengan Bootstrap Grid System yang super responsive! Coba resize browsernya! 📱💻✨</p>
+            `;
+            messageDiv.style.display = 'block';
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 6000);
+        
+
+        // Add floating hearts animation
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '💖';
+            heart.style.position = 'fixed';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.bottom = '-50px';
+            heart.style.fontSize = Math.random() * 20 + 20 + 'px';
+            heart.style.opacity = '0.7';
+            heart.style.animation = 'floatUp 4s ease-in forwards';
+            heart.style.pointerEvents = 'none';
+            heart.style.zIndex = '9999';
+            document.body.appendChild(heart);
+        }
+         setTimeout(() => heart.remove(), 4000);
+    
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatUp {
+                to {
+                    bottom: 120%;
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        setInterval(createHeart, 3000);
+    </
+            
+
+
+
+            
+
+            
