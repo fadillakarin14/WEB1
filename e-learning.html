@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Tugas E-Leraning 1</title>
+    <style>
+        /* Mengatur style dasar halaman */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            
+            /* Ini adalah 1 elemen desain yang disyaratkan: Warna Background */
+            background-color: whitesmoke; 
+        }
+
+        /* Styling untuk container agar rapi */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: lightcoral;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Styling untuk tombol */
+        button {
+            background-color: purple; /* Biru */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Efek hover pada tombol */
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>Tugas E-Learning 1</h1>
+        <p>Haiii, selamat datang di website sederhana saya.</p>
+        <p>Web ini di buat untuk memenuhi tugas e-learning pemograman web 1.</p>
+        <p id="teks-target">Aku akan berubahhhhh kalo kamu pukul tombol biru di bawahh hahahaha</p>
+        <hr>
+
+        <button id="tombolUbah">pukul akuu!</button>
+    </div>
+
+    <script>
+        // 1. Menemukan tombol berdasarkan ID-nya
+        var tombol = document.getElementById("tombolUbah");
+
+        // 2. Menambahkan "event listener" yang akan berjalan saat tombol diklik
+        tombol.addEventListener("click", function() {
+            
+            // Aksi yang dijalankan: Mengubah teks di halaman
+            
+            // 3. Menemukan paragraf target berdasarkan ID-nya
+            var target = document.getElementById("teks-target");
+            
+            // 4. Mengubah isi teks (innerHTML) dari paragraf target
+            target.innerHTML = "<strong>kamu sudah merubah ku :)</strong>,";
+            
+            // (Alternatif: Jika ingin menampilkan alert, ganti kode di atas dengan ini)
+            // alert("Tombol berhasil diklik!");
+
+            // (Alternatif: Jika ingin menampilkan tanggal)
+            // target.innerHTML = "Waktu sekarang: " + new Date();
+        });
+    </script>
+
+</body>
+</html>
